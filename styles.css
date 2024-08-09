@@ -1,0 +1,170 @@
+/*/// Variables ///*/
+
+@property --primary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #F9DC5C; /* Naples yellow */
+}
+
+@property --secondary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #403F4C; /* Onyx */
+}
+
+@property --accent-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #3185FC; /* Azure (blue) */
+}
+
+* {
+  font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
+  color: var(--secondary-color)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 20px;
+  justify-content: center;
+}
+
+/*/// Header & navigation ///*/
+header {
+  margin: 0;
+  padding: 5px;
+  background-color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav {
+  padding: 10px;
+  font-weight: 500;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav > ul > li {
+  flex-basis: 0 2;
+  flex-shrink: 1;
+}
+
+/* Site Logo */
+nav > ul > li:nth-child(1) {
+  flex-basis: 60%;
+  font-weight: 900;
+  font-size: 20px;
+  flex-basis: 2 1;
+  align-self: flex-start;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+  font-weight: 900;
+}
+
+/*/// Hero title & content ///*/
+
+#page-img {
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  /* border: 5px solid var(--blue); */
+  margin: 20px auto;
+}
+
+h1 {
+  margin: auto;
+  padding: 0;
+  /* display: inline-block; */
+  width: 200px;
+}
+
+.accent-color {
+  color: var(--accent-color)
+}
+
+/*// Section Styles //*/
+
+section > h2 {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+section > p,
+section > form {
+  margin-left: 20px;
+}
+
+/* Skipped '.introduction */
+
+.benefits > ul > li {
+  margin: 10px 0;
+}
+
+/* Skipped '.form' */
+
+#sign-up-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#sign-up-form > label {
+  margin: 10px 0;
+  position: relative;
+}
+
+#sign-up-form > label > input,
+#sign-up-form > label > select {
+  position: absolute;
+  left: 75px;
+}
+
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+  /* border: 2px solid var(--blue); */
+  width: 100px;
+  margin: 20px 75px 0;
+}
+
+/*// Footer //*/
+
+footer {
+  background-color: var(--primary-color);
+  border-top: 2px solid var(--secondary-color);
+  height: 200px;
+  padding: 30px;
+}
+
+footer > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+footer > ul > li {
+  width: 150px;
+  font-size: 12px;
+  text-align: center;
+}

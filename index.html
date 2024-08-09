@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke's Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    </style>
+    <title>Sign Up: Code Camp Study Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-    <body>
-        <!-- Header -->
-        <header>
 
-            <!-- Navigation -->
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+<body>
+    <!-- Header -->
+    <header>
 
-        </header>
-        
-        <!-- Main Content -->
-        <main>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">Code Camp</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
 
-            <!-- Page Title -->
-            <h1>Code Camp Study Group</h1>
+    </header>
 
-            <!-- Page Logo -->
-            <img src="/" alt="my image">
+    <!-- Main Content -->
+    <main>
 
-            <!-- Opening Paragraph -->
-            <section class="paragraph">
-                <p>Sign up below to join a Code Camp study group.</p>
-            </section>
+        <!-- Page Logo -->
+        <img id="page-img" width="200px" src="./book.png" alt="my image">
 
-            <!-- Benefits -->
-            <section class="benefits"></section>
+        <!-- Page Title -->
+        <h1>Learn to code in a student-led <span class="accent-color">study group</span></h1>
 
-            <!-- Sign Up Form -->
-            <section class="form">
-                <form action="submit">
-                    <input type="text" name="Name" placeholder="text">
-                    <input type="text" name="Email" placeholder="text">
+        <!-- Opening Paragraph -->
+        <section class="Introduction">
+            <h2>Learn to code as a group.</h2>
+            <p>Sign up below to join a Code Camp study group. Practice coding concepts with students at the same coding
+                level as you.</p>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <h2>Benefits</h2>
+            <ul>
+                <li>Experience</li>
+                <li>Accountability</li>
+                <li>Relationships</li>
+            </ul>
+        </section>
+
+        <!-- Sign Up Form -->
+        <section class="form">
+            <h2>Sign Up</h2>
+            <form id="sign-up-form" action="submit">
+
+                <!-- Name input & label -->
+                <label for="name" class="label">
+                    Name
+                    <input type="text" name="name" placeholder="full name">
+                </label>
+
+                <!-- Email input & label -->
+                <label for="email" class="label">
+                    Email
+                    <input type="text" name="email" placeholder="student@email.com">
+                </label>
+
+                <!-- SKill input & label -->
+                <label for="text" class="label">
+                    Level
                     <select value="">
                         <option name="beginner" id="beginner">Beginner</option>
                         <option name="intermediate" id="intermediate">Intermediate</option>
                         <option name="master" id="master">Master</option>
                     </select>
-                </form>
-            </section>
-        </main>
+                </label>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
 
-        <!-- Footer -->
-        <footer>Copyright 2024 All Rights Reserved</footer>
-    </body>
+    <!-- Footer -->
+    <footer><ul>
+        <li>Github</li>
+        <li>Copyright 2024 - All rights reserved</li>
+        <li><a href="https://www.flaticon.com/free-icons/study" title="study icons">Study icons created by yaicon - Flaticon</a></li>
+    </ul></footer>
+    <script type="text/javascript">
+        $("form").submit(function (e) {
+            return false;
+        })
+    </script>
+</body>
+
 </html>
