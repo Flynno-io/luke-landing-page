@@ -169,7 +169,7 @@ section > form {
 #contact-form > label {
   margin: 10px 0;
   position: relative;
-  flex-basis: 20%;
+  flex-basis: 10%;
 }
 
 .input {
