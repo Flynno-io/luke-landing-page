@@ -16,7 +16,7 @@
 
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
 
         <!-- Navigation -->
         <nav>
@@ -31,7 +31,7 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="content">
 
         <!-- Page Logo -->
         <a href="https://www.flaticon.com/free-icons/coding" title="coding icons">
@@ -106,6 +106,18 @@
         $("form").submit(function (e) {
             return false;
         })
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
     </script>
 </body>
 
@@ -122,6 +134,6 @@
 [x] It's done when the header contains a navigation bar with three links that display inline, including a contact link.
 [] It's done when, if the contact link is clicked, the page jumps directly to the contact form.
 [x] It's done when the contact form includes input elements for name and email.
-[] It's done when the contact form includes a Send button.
-[] It's done when the image includes a descriptive alt attribute.
+[x] It's done when the contact form includes a Send button.
+[x] It's done when the image includes a descriptive alt attribute.
 [] It's done when the page is deployed to GitHub Pages. -->
