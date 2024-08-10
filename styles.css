@@ -190,6 +190,11 @@ input[type="submit"] {
   padding: 5px 40px;
   box-sizing: border-box;
   cursor: pointer;
+  border: none;
+}
+
+#contact-submit:hover {
+  background-color: var(--accent-color);
 }
 
 /*// Footer //*/
